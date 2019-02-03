@@ -1,0 +1,22 @@
+{
+  "html.format.wrapAttributes": "force",
+  "html.format.wrapLineLength": 80,
+  "prettier.printWidth": 80,
+  "prettier.semi": false,
+  "prettier.trailingComma": "es5",
+  "prettier.tslintIntegration": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.renderWhitespace": "none",
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": false,
+  "recommendations": [
+    "mrmlnc.vscode-scss",
+    "esbenp.prettier-vscode",
+    "visualstudioexptteam.vscodeintellicode"
+  ]
+}

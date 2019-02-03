@@ -1,0 +1,31 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: palegoldenrod;
+
+  .la-nav__logo {
+    width: 60px;
+    height: 60px;
+    background-image: url("/asset/artlab.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .la-nav__tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .la-nav__tab {
+      margin-right: 20px;
+
+      .material-icons {
+        margin-right: 10px;
+        font-size: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+$break-xs: 400px;
+$break-sm: 700px;
+$break-md: 960px;
+$break-lg: 1140px;
+$break-xl: 1824px;
+
+@mixin responsive-lg {
+  @media (min-width: $break-lg) and (max-width: $break-xl) {
+    @content;
+  }
+}
+
+@mixin responsive-md {
+  @media (min-width: $break-md) and (max-width: $break-lg) {
+    @content;
+  }
+}
+
+@mixin responsive-sm {
+  @media (min-width: $break-sm) and (max-width: $break-md) {
+    @content;
+  }
+}
+
+@mixin responsive-xs {
+  @media (min-width: $break-xs) and (max-width: $break-sm) {
+    @content;
+  }
+}

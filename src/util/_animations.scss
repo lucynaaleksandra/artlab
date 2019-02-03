@@ -1,0 +1,169 @@
+/* ----- EASING FUNC ----- */
+
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+
+/* ----- MIXINS ----- */
+
+@mixin animto($name, $duration, $ease, $end, $delay: 0ms) {
+  @content;
+  animation: $name $duration $ease $end;
+}
+
+@mixin will-animate-y {
+  opacity: 0;
+  transform: translateY(30px);
+  @content;
+
+  &.la-animatable--animate {
+    animation: to-origin-y 3000ms $easeOutBack forwards;
+  }
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@mixin hover-scale-01 {
+  cursor: pointer;
+  opacity: 0.9;
+  transform: scale(1);
+  transition: $easeOutQuart 250ms;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+@mixin create-fade-up-keyframes($animationName, $opacity: 0.7) {
+  @keyframes #{$animationName} {
+    from {
+      opacity: 0;
+      transform: translateY(120px);
+    }
+    to {
+      opacity: $opacity;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ----- KEYFRAMES ----- */
+
+@include keyframes(fade) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes enter-scale-x {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes to-origin-y {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes to-right {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(20%);
+  }
+}
+
+@keyframes left-to-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes right-to-left {
+  0% {
+    opacity: 0;
+    transform: translateX(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// @keyframes slidein {
+//   0% {
+//     transform: scaleX(0);
+//   }
+//   100% {
+//     transform: scaleX(1);
+//   }
+// }
+
+@include create-fade-up-keyframes("enter-fade-up-1", 0.8);
+
+// @keyframes slant-background {
+//   0% {
+//     //opacity: 0;
+//     transform: rotateZ(0) scaleY(1.05);
+//   }
+//   100% {
+//     //opacity: 1;
+//     transform: translateY(0) rotateZ(-3deg) scaleY(1);
+//   }
+// }
