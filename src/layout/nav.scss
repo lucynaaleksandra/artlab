@@ -1,8 +1,11 @@
+@import "../util/variables";
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background: $color-bg;
 
   .la-nav__logo {
     width: 60px;

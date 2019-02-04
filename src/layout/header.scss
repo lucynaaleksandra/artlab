@@ -1,44 +1,89 @@
 @import "../util/variables";
+@import "../util/mediaq";
 
 header {
-  height: 90vh;
   padding: 50px 100px;
   display: flex;
   flex-direction: column;
-  background: rgb(253, 249, 234);
+  background: $color-bg;
 
   .la-header {
     margin: 0 50px 50px 50px;
-    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include responsive-sm {
+      margin: 0;
+    }
+    @include responsive-sm {
+      margin: 0;
+    }
+
     h1 {
+      width: 50%;
       margin: 20px;
       text-align: center;
+
+      @include responsive-sm {
+        width: 100%;
+      }
+      @include responsive-xs {
+        width: 100%;
+      }
     }
     p {
-      width: 30%;
+      width: 40%;
       font-size: 14px;
       line-height: 2;
       text-align: center;
+
+      @include responsive-md {
+        width: 50%;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+      @include responsive-sm {
+        width: 100%;
+      }
+      @include responsive-xs {
+        width: 100%;
+      }
     }
   }
 
   .la-header__columns {
-    margin: 0 100px;
     display: flex;
     justify-content: center;
     flex: 1 0 auto;
+    margin: 0 100px;
+
+    @include responsive-md {
+      margin: 0;
+    }
+    @include responsive-sm {
+      flex-direction: column;
+      margin: 0;
+    }
+    @include responsive-xs {
+      flex-direction: column;
+      margin: 0;
+    }
 
     .la-header__col-1,
     .la-header__col-2,
     .la-header__col-3 {
+      width: 40%;
       margin: 20px;
-      width: 30%;
       display: flex;
       flex-direction: column;
-      // justify-content: center;
+
+      @include responsive-sm {
+        width: 100%;
+      }
+      @include responsive-xs {
+        width: 100%;
+      }
     }
 
     .la-header__col-1 {
@@ -72,8 +117,8 @@ header {
       // background: mediumturquoise;
 
       p {
-        padding: 20px;
-        font-size: 12px;
+        padding: 10px;
+        font-size: 18px;
       }
     }
   }
@@ -91,15 +136,18 @@ header {
       box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.1);
       cursor: pointer;
 
-      h5,
+      p,
       i {
         color: $color-yellow;
       }
+      h6 {
+        font-weight: 600;
+      }
     }
 
-    h5 {
+    p {
       flex: 0 0 40px;
-      padding: 20px;
+      padding: 10px;
       align-items: center;
       font-size: 18px;
     }
@@ -107,7 +155,8 @@ header {
       flex: 1 1 auto;
       display: flex;
       align-items: center;
-      font-size: 15px;
+      font-size: 14px;
+      font-weight: 400;
     }
     i {
       flex: 0 0 40px;
