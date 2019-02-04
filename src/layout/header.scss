@@ -18,8 +18,8 @@ header {
 
   .la-header__columns {
     display: flex;
+    justify-content: center;
     flex: 1 0 auto;
-    // margin: 30px 50px;
 
     .la-header__col-1,
     .la-header__col-2,
@@ -33,10 +33,36 @@ header {
       background: cadetblue;
     }
     .la-header__col-2 {
+      // justify-content: center;
       background: mediumorchid;
+
+      > div {
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        padding: 10px;
+      }
     }
     .la-header__col-3 {
       background: mediumspringgreen;
+    }
+  }
+
+  .la-header__tab {
+    display: flex;
+    flex-direction: row;
+
+    h5 {
+      margin: 10px;
+      align-items: center;
+      font-size: 18px;
+    }
+    h6 {
+      display: flex;
+      align-items: center;
+      font-size: 17px;
     }
   }
 }

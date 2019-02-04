@@ -1,4 +1,4 @@
-$padding: 50px 100px;
+// $padding: 50px 100px;
 
 /* ----- COLORS ----- */
 
@@ -8,8 +8,13 @@ $color-secondary: rgb(253, 166, 5);
 // $color-text-secondary: rgb(175, 174, 174);
 $color-white: rgb(255, 255, 255);
 $color-black: rgb(0, 0, 0);
+$color-yellow: #ffdd6e;
+$color-purple: #9365d5;
+$color-blue: #6ee4d7;
+$color-orange: #ff9247;
+$color-dark-gray: #3e3a33;
 
-// Functional color variables
+// FUNCTIONAL COLOR VARIABLES
 $color-shadow-light: rgba($color-white, 0.5);
 // $color-shadow-med: rgba($color-text-secondary, 0.5);
 $color-shadow-black: rgba($color-black, 0.6);
