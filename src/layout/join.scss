@@ -1,3 +1,5 @@
+@import "../util/animations";
+
 .la-join {
   height: 60vh;
   display: flex;
@@ -110,6 +112,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include will-animate-y;
 
     h2 {
       margin-top: 20px;

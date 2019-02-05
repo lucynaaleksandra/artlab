@@ -1,4 +1,5 @@
 @import "../util/variables";
+@import "../util/animations";
 
 nav {
   display: flex;
@@ -14,12 +15,16 @@ nav {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0;
+    animation: left-to-right 2500ms $easeOutBack 500ms forwards;
   }
 
   .la-nav__tabs {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    animation: right-to-left 2000ms $easeOutBack 400ms forwards;
 
     .la-nav__tab {
       margin-right: 20px;
