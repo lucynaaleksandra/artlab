@@ -131,11 +131,6 @@ header {
         }
       }
     }
-
-    .la-header__col-3 p {
-      padding: 10px;
-      font-size: 11px;
-    }
   }
 
   .la-header__tab {
@@ -145,6 +140,7 @@ header {
     flex-direction: row;
     align-items: center;
     background: $color-white;
+    color: $color-gray;
     z-index: 1;
 
     p {
