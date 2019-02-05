@@ -62,10 +62,10 @@
   .la-join__img-5 {
     top: 80px;
     left: 270px;
-    @include fade-down-animate;
+    // @include fade-down-animate;
 
-    // opacity: 0;
-    // animation: scale-down 2000ms $easeOutCirc 200ms normal forwards;
+    opacity: 0;
+    animation: scale-down 2000ms $easeOutCirc 200ms normal forwards;
   }
   .la-join__img-6 {
     top: 300px;
@@ -129,8 +129,8 @@
     @include will-animate-y;
 
     // &.la-animatable--animate {
-    // 	opacity: 0;
-    //   animation: scale-down 2000ms $easeOutCirc 800ms forwards;
+    // opacity: 0;
+    // animation: scale-down 2000ms $easeOutCirc 800ms forwards;
     // }
 
     h2 {
