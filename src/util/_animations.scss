@@ -146,24 +146,16 @@ $easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
   }
 }
 
-// @keyframes slidein {
-//   0% {
-//     transform: scaleX(0);
-//   }
-//   100% {
-//     transform: scaleX(1);
-//   }
-// }
-
 @include create-fade-up-keyframes("enter-fade-up-1", 0.8);
 
-// @keyframes slant-background {
-//   0% {
-//     //opacity: 0;
-//     transform: rotateZ(0) scaleY(1.05);
-//   }
-//   100% {
-//     //opacity: 1;
-//     transform: translateY(0) rotateZ(-3deg) scaleY(1);
-//   }
-// }
+// animation: scale-down 2000ms $easeOutBack 1300ms forwards;
+@keyframes scale-down {
+  0% {
+    // opacity: 0;
+    transform: scale(1.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
