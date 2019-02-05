@@ -37,16 +37,15 @@
 
   .la-process__svg-1,
   .la-process__svg-2 {
+    position: absolute;
     width: 400px;
   }
 
   .la-process__svg-1 {
-    position: absolute;
     top: 150px;
     left: -100px;
   }
   .la-process__svg-2 {
-    position: absolute;
     bottom: -40px;
     right: -100px;
   }
@@ -193,55 +192,41 @@
           width: 90%;
         }
 
-        img:nth-child(1) {
+        img {
           margin: 20px;
           align-self: flex-end;
           position: absolute;
+
+          @include responsive-sm {
+            display: none;
+          }
+          @include responsive-xs {
+            display: none;
+          }
+        }
+
+        img:nth-child(1) {
           top: 10px;
           right: -150px;
 
           @include responsive-md {
             right: -100px;
           }
-          @include responsive-sm {
-            display: none;
-          }
-          @include responsive-xs {
-            display: none;
-          }
         }
         img:nth-child(2) {
-          margin: 20px;
-          align-self: flex-end;
-          position: absolute;
           top: 90px;
           right: -150px;
 
           @include responsive-md {
             right: -100px;
           }
-          @include responsive-sm {
-            display: none;
-          }
-          @include responsive-xs {
-            display: none;
-          }
         }
         img:nth-child(3) {
-          margin: 20px;
-          align-self: flex-end;
-          position: absolute;
           top: 170px;
           right: -150px;
 
           @include responsive-md {
             right: -100px;
-          }
-          @include responsive-sm {
-            display: none;
-          }
-          @include responsive-xs {
-            display: none;
           }
         }
 

@@ -21,17 +21,20 @@ header {
       margin: 0;
     }
 
-    h1 {
-      width: 50%;
-      margin: 20px;
-      text-align: center;
-
+    h1,
+    p {
       @include responsive-sm {
         width: 100%;
       }
       @include responsive-xs {
         width: 100%;
       }
+    }
+
+    h1 {
+      width: 50%;
+      margin: 20px;
+      text-align: center;
     }
     p {
       width: 40%;
@@ -44,35 +47,30 @@ header {
         font-size: 12px;
         line-height: 1.5;
       }
-      @include responsive-sm {
-        width: 100%;
-      }
-      @include responsive-xs {
-        width: 100%;
-      }
     }
+  }
+
+  .la-header__svg-1,
+  .la-header__svg-2,
+  .la-header__svg-3 {
+    position: absolute;
+    opacity: 0.8;
   }
 
   .la-header__svg-1 {
     width: 110px;
-    position: absolute;
     top: 300px;
     left: 160px;
-    opacity: 0.8;
   }
   .la-header__svg-2 {
     width: 30px;
-    position: absolute;
     top: 180px;
     right: 300px;
-    opacity: 0.8;
   }
   .la-header__svg-3 {
     width: 80px;
-    position: absolute;
     top: 520px;
     right: 160px;
-    opacity: 0.8;
   }
 
   .la-header__columns {

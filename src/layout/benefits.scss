@@ -9,19 +9,45 @@
     flex-direction: column;
   }
 
-  .la-benefits__svg-1 {
-    width: 350px;
-    position: absolute;
-    left: -60px;
-    bottom: -800px;
-  }
-
+  .la-benefits__svg-1,
   .la-benefits__svg-2 {
     width: 350px;
     position: absolute;
+    opacity: 0.8;
+  }
+
+  .la-benefits__svg-1 {
+    left: -60px;
+    bottom: -800px;
+  }
+  .la-benefits__svg-2 {
     right: -230px;
     bottom: -1000px;
-    opacity: 0.8;
+  }
+
+  .la-benefits__img-3,
+  .la-benefits__img-4,
+  .la-benefits__img-5 {
+    position: absolute;
+    @include responsive-sm {
+      display: none;
+    }
+    @include responsive-xs {
+      display: none;
+    }
+  }
+
+  .la-benefits__img-3 {
+    left: 150px;
+    bottom: -700px;
+  }
+  .la-benefits__img-4 {
+    left: 400px;
+    bottom: -900px;
+  }
+  .la-benefits__img-5 {
+    left: 350px;
+    bottom: -500px;
   }
 
   .la-benefits__header {
@@ -83,7 +109,6 @@
       position: absolute;
       left: -15px;
       top: -15px;
-      //z-index: -1;
     }
   }
 }

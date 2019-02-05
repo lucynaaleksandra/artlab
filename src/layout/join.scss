@@ -6,22 +6,34 @@
   align-items: center;
   position: relative;
 
-  .la-join__svg-1 {
-    width: 65px;
+  .la-join__svg-1,
+  .la-join__svg-2,
+  .la-join__svg-3,
+  .la-join__svg-4,
+  .la-join__svg-5,
+  .la-join__svg-6,
+  .la-join__svg-7,
+  .la-join__svg-8,
+  .la-join__svg-9,
+  .la-join__svg-10 {
     position: absolute;
-    top: 150px;
-    left: 100px;
+  }
+
+  .la-join__svg-1,
+  .la-join__svg-2,
+  .la-join__svg-3,
+  .la-join__svg-4 {
+    width: 65px;
     opacity: 0.8;
   }
 
+  .la-join__svg-1 {
+    top: 150px;
+    left: 100px;
+  }
   .la-join__svg-2 {
-    width: 65px;
-    position: absolute;
     top: 400px;
     left: 220px;
-    right: 0;
-    bottom: 0;
-    opacity: 0.8;
 
     @include responsive-sm {
       left: 200px;
@@ -31,58 +43,66 @@
       left: 130px;
     }
   }
-
   .la-join__svg-3 {
-    width: 65px;
-    position: absolute;
     right: 200px;
     bottom: 100px;
-    opacity: 0.8;
 
     @include responsive-xs {
       right: 100px;
       bottom: 120px;
     }
   }
-
   .la-join__svg-4 {
-    width: 65px;
-    position: absolute;
     right: 140px;
     bottom: 400px;
-    opacity: 0.8;
   }
 
   .la-join__svg-5 {
-    position: absolute;
     top: 80px;
     left: 270px;
   }
-
   .la-join__svg-6 {
-    position: absolute;
     top: 300px;
     left: 60px;
   }
   .la-join__svg-7 {
-    position: absolute;
     top: 250px;
     left: 350px;
   }
   .la-join__svg-8 {
-    position: absolute;
     right: 430px;
     bottom: 180px;
   }
   .la-join__svg-9 {
-    position: absolute;
     right: 230px;
     bottom: 250px;
   }
   .la-join__svg-10 {
-    position: absolute;
     right: 330px;
     bottom: 430px;
+  }
+
+  .la-join__svg-7,
+  .la-join__svg-8 {
+    @include responsive-md {
+      display: none;
+    }
+  }
+  .la-join__svg-5,
+  .la-join__svg-7,
+  .la-join__svg-8,
+  .la-join__svg-9 {
+    @include responsive-sm {
+      display: none;
+    }
+  }
+  .la-join__svg-10,
+  .la-join__svg-7,
+  .la-join__svg-8,
+  .la-join__svg-9 {
+    @include responsive-xs {
+      display: none;
+    }
   }
 
   .la-join__content {
@@ -103,12 +123,4 @@
       text-align: center;
     }
   }
-
-  // .la-join__svg-3,
-  // .la-join__svg-4 {
-  //   display: flex;
-  //   flex-direction: row;
-  //   // justify-content: center;
-  //   align-self: flex-end;
-  // }
 }
