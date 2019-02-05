@@ -1,0 +1,89 @@
+.la-benefits {
+  display: flex;
+  margin: 100px;
+
+  @include responsive-sm {
+    flex-direction: column;
+  }
+  @include responsive-xs {
+    flex-direction: column;
+  }
+
+  .la-benefits__svg-1 {
+    width: 350px;
+    position: absolute;
+    left: -60px;
+    bottom: -800px;
+  }
+
+  .la-benefits__svg-2 {
+    width: 350px;
+    position: absolute;
+    right: -230px;
+    bottom: -1000px;
+    opacity: 0.8;
+  }
+
+  .la-benefits__header {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    h2 {
+      margin-top: 20px;
+    }
+    p {
+      margin: 50px 0;
+      line-height: 1.5;
+    }
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .la-benefits__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .la-benefits__box-1,
+    .la-benefits__box-2,
+    .la-benefits__box-3,
+    .la-benefits__box-4 {
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+
+      @include responsive-md {
+        padding: 20px;
+      }
+    }
+
+    .la-benefits__box-3,
+    .la-benefits__box-4 {
+      height: 50%;
+    }
+
+    h4 {
+      margin-bottom: 40px 0;
+    }
+  }
+
+  i {
+    font-size: 35px;
+    position: relative;
+    margin-bottom: 20px;
+
+    img {
+      opacity: 0.3;
+      width: 65px;
+      position: absolute;
+      left: -15px;
+      top: -15px;
+      //z-index: -1;
+    }
+  }
+}

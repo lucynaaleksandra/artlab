@@ -1,0 +1,73 @@
+hr {
+  opacity: 0.2;
+}
+
+footer {
+  margin: 0 200px;
+  display: flex;
+  flex-direction: column;
+  font-size: 9px;
+
+  .la-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .la-footer__logo {
+      width: 60px;
+      height: 60px;
+      background-image: url("/asset/artlab.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .la-footer__social {
+      display: flex;
+      align-items: center;
+
+      i {
+        flex-direction: row;
+        justify-content: center;
+        margin-right: 10px;
+        font-size: 18px;
+      }
+    }
+
+    .la-footer__tabs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .la-footer__tab {
+        margin-right: 20px;
+
+        .material-icons {
+          margin-right: 10px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .la-footer__copy {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    @include responsive-xs {
+      font-size: 9px;
+    }
+  }
+
+  .la-footer__terms {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    @include responsive-xs {
+      font-size: 9px;
+    }
+  }
+}
