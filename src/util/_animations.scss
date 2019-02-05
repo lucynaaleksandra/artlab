@@ -22,6 +22,18 @@ $easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
   }
 }
 
+@mixin fade-down-animate {
+  transform: scale(1.7);
+  @content;
+
+  &.la-animatable--animate {
+    animation: scale-down 2000ms $easeOutCirc forwards;
+  }
+}
+
+// opacity: 0;
+// animation: scale-down 2000ms $easeOutCirc 800ms forwards;
+
 @mixin keyframes($animationName) {
   @-webkit-keyframes #{$animationName} {
     @content;
@@ -45,7 +57,7 @@ $easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
 
   &:hover {
     opacity: 1;
-    transform: scale(1.02);
+    transform: scale(1.03);
   }
 }
 
@@ -150,11 +162,10 @@ $easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
 
 // animation: scale-down 2000ms $easeOutBack 1300ms forwards;
 @keyframes scale-down {
-  0% {
-    // opacity: 0;
-    transform: scale(1.7);
-  }
-  100% {
+  // from {
+  //   transform: scale(1.7);
+  // }
+  to {
     opacity: 1;
     transform: scale(1);
   }

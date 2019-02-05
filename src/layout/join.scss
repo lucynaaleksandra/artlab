@@ -62,8 +62,10 @@
   .la-join__img-5 {
     top: 80px;
     left: 270px;
-    opacity: 0;
-    animation: scale-down 2000ms $easeOutCirc 200ms normal forwards;
+    @include fade-down-animate;
+
+    // opacity: 0;
+    // animation: scale-down 2000ms $easeOutCirc 200ms normal forwards;
   }
   .la-join__img-6 {
     top: 300px;
@@ -126,6 +128,11 @@
     align-items: center;
     @include will-animate-y;
 
+    // &.la-animatable--animate {
+    // 	opacity: 0;
+    //   animation: scale-down 2000ms $easeOutCirc 800ms forwards;
+    // }
+
     h2 {
       margin-top: 20px;
     }
@@ -136,6 +143,10 @@
       font-size: 13px;
       line-height: 1.6;
       text-align: center;
+    }
+
+    button {
+      @include hover-scale-01;
     }
   }
 }

@@ -28,6 +28,7 @@ nav {
 
     .la-nav__tab {
       margin-right: 20px;
+      @include hover-scale-01;
 
       .material-icons {
         margin-right: 10px;

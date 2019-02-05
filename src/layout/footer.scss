@@ -30,7 +30,11 @@ footer {
         flex-direction: row;
         justify-content: center;
         margin-right: 10px;
-        font-size: 18px;
+        font-size: 20px;
+
+        &:hover {
+          @include hover-scale-01;
+        }
       }
     }
 
@@ -41,6 +45,10 @@ footer {
 
       .la-footer__tab {
         margin-right: 20px;
+
+        &:hover {
+          @include hover-scale-01;
+        }
 
         .material-icons {
           margin-right: 10px;
