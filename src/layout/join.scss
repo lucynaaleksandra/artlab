@@ -62,40 +62,42 @@
   .la-join__img-5 {
     top: 80px;
     left: 270px;
-    // @include fade-down-animate;
-
-    opacity: 0;
-    animation: scale-down 2000ms $easeOutCirc 200ms normal forwards;
+    @include animate-scale-down(200ms);
   }
   .la-join__img-6 {
     top: 300px;
     left: 60px;
+    // @include animate-scale-down(1400ms);
     opacity: 0;
     animation: scale-down 2000ms $easeOutCirc 1400ms normal forwards;
   }
   .la-join__img-7 {
     top: 250px;
     left: 350px;
+    // @include animate-scale-down(1100ms);
     opacity: 0;
     animation: scale-down 2000ms $easeOutCirc 1100ms normal forwards;
   }
   .la-join__img-8 {
     right: 430px;
     bottom: 180px;
+    // @include animate-scale-down(500ms);
     opacity: 0;
     animation: scale-down 2000ms $easeOutCirc 500ms normal forwards;
   }
   .la-join__img-9 {
     right: 230px;
     bottom: 250px;
+    // @include animate-scale-down(1800ms);
     opacity: 0;
     animation: scale-down 2000ms $easeOutCirc 1800ms normal forwards;
   }
   .la-join__img-10 {
     right: 330px;
     bottom: 430px;
-    opacity: 0;
-    animation: scale-down 2000ms $easeOutCirc 800ms normal forwards;
+    @include animate-scale-down(800ms);
+    // opacity: 0;
+    // animation: scale-down 2000ms $easeOutCirc 800ms normal forwards;
   }
 
   .la-join__img-7,

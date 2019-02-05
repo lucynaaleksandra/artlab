@@ -112,6 +112,7 @@
       display: flex;
       justify-content: center;
       margin: 80px 0;
+      @include will-animate-y;
 
       @include responsive-sm {
         flex-direction: column;

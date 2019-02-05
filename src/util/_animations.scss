@@ -12,27 +12,26 @@ $easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
   animation: $name $duration $ease $delay $end;
 }
 
-@mixin will-animate-y {
+@mixin will-animate-y($delay: 0ms) {
   opacity: 0;
   transform: translateY(30px);
   @content;
 
   &.la-animatable--animate {
-    animation: to-origin-y 3000ms $easeOutBack forwards;
+    animation: to-origin-y 3000ms $easeOutBack $delay forwards;
   }
 }
 
-@mixin fade-down-animate {
-  transform: scale(1.7);
+@mixin animate-scale-down($delay: 0ms) {
   @content;
+  opacity: 0;
+  transform: scale(1.7);
+  animation: scale-up 1000ms $easeOutCirc forwards;
 
   &.la-animatable--animate {
-    animation: fade-down 2000ms $easeOutCirc forwards;
+    animation: scale-down 2000ms $easeOutCirc $delay forwards;
   }
 }
-
-// opacity: 0;
-// animation: scale-down 2000ms $easeOutCirc 800ms forwards;
 
 @mixin keyframes($animationName) {
   @-webkit-keyframes #{$animationName} {
@@ -76,10 +75,21 @@ $easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
 
 /* ----- KEYFRAMES ----- */
 
-@keyframes fade-down {
+@keyframes scale-down {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes scale-up {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.7);
   }
 }
 
@@ -110,16 +120,16 @@ $easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
   }
 }
 
-// @keyframes fade-down {
-//   from {
-//     opacity: 0;
-//     transform: translateY(-40px);
-//   }
-//   to {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @keyframes fade-up {
   from {
@@ -168,13 +178,3 @@ $easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
 @include create-fade-up-keyframes("enter-fade-up-1", 0.8);
 
 // animation: scale-down 2000ms $easeOutBack 1300ms forwards;
-@keyframes scale-down {
-  0% {
-    opacity: 0;
-    transform: scale(1.7);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}

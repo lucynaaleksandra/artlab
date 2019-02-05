@@ -69,22 +69,16 @@ header {
     width: 110px;
     top: 300px;
     left: 160px;
-    // opacity: 0;
-    // animation: fade-up 2000ms $easeOutBack 1000ms forwards;
   }
   .la-header__svg-2 {
     width: 30px;
     top: 180px;
     right: 300px;
-    // opacity: 0;
-    // animation: fade-up 2000ms $easeOutBack 1000ms forwards;
   }
   .la-header__svg-3 {
     width: 80px;
     top: 520px;
     right: 160px;
-    // opacity: 0;
-    // animation: fade-up 2000ms $easeOutBack 1000ms forwards;
   }
 
   .la-header__columns {
@@ -177,6 +171,7 @@ header {
 
     .la-header__col-2 {
       background: $color-white;
+      color: $color-gray;
       z-index: 2;
       opacity: 0;
       animation: fade-up 2000ms $easeOutBack 800ms forwards;
@@ -186,6 +181,7 @@ header {
         padding: 20px;
         margin-bottom: 20px;
       }
+
       div:last-child {
         height: 60%;
         h2 {

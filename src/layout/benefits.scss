@@ -1,5 +1,4 @@
 @import "../util/animations";
-@import "../util/animations";
 
 .la-benefits {
   display: flex;
@@ -32,6 +31,7 @@
   .la-benefits__img-4,
   .la-benefits__img-5 {
     position: absolute;
+
     @include responsive-sm {
       display: none;
     }
@@ -42,21 +42,24 @@
 
   .la-benefits__img-3 {
     left: 150px;
-    bottom: -700px;
-    opacity: 0;
-    animation: fade 3000ms $easeOutBack 300ms forwards;
+    bottom: -630px;
+    @include animate-scale-down(300ms);
+    // opacity: 0;
+    // animation: fade 3000ms $easeOutBack 300ms forwards;
   }
   .la-benefits__img-4 {
     left: 400px;
-    bottom: -900px;
-    opacity: 0;
-    animation: fade 3000ms $easeOutBack 1100ms forwards;
+    bottom: -700px;
+    @include animate-scale-down(1100ms);
+    // opacity: 0;
+    // animation: fade 3000ms $easeOutBack 1100ms forwards;
   }
   .la-benefits__img-5 {
     left: 350px;
     bottom: -500px;
-    opacity: 0;
-    animation: fade 3000ms $easeOutBack 700ms forwards;
+    @include animate-scale-down(700ms);
+    // opacity: 0;
+    // animation: fade 3000ms $easeOutBack 700ms forwards;
   }
 
   .la-benefits__header {
@@ -101,6 +104,7 @@
 
     .la-benefits__box-1,
     .la-benefits__box-2 {
+      // @include animate-scale-down(600ms);
       opacity: 0;
       animation: fade-up 2000ms $easeOutBack 600ms forwards;
     }
@@ -108,6 +112,7 @@
     .la-benefits__box-3,
     .la-benefits__box-4 {
       height: 50%;
+      // @include animate-scale-down(900ms);
       opacity: 0;
       animation: fade-up 2000ms $easeOutBack 900ms forwards;
     }
