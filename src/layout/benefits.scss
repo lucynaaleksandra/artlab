@@ -41,25 +41,19 @@
   }
 
   .la-benefits__img-3 {
-    left: 150px;
-    bottom: -630px;
-    @include animate-scale-down(300ms);
-    // opacity: 0;
-    // animation: fade 3000ms $easeOutBack 300ms forwards;
+    left: 130px;
+    bottom: -750px;
+    // @include animate-scale-down(300ms);
   }
   .la-benefits__img-4 {
-    left: 400px;
-    bottom: -700px;
-    @include animate-scale-down(1100ms);
-    // opacity: 0;
-    // animation: fade 3000ms $easeOutBack 1100ms forwards;
+    left: 350px;
+    bottom: -900px;
+    // @include animate-scale-down(1100ms);
   }
   .la-benefits__img-5 {
-    left: 350px;
-    bottom: -500px;
-    @include animate-scale-down(700ms);
-    // opacity: 0;
-    // animation: fade 3000ms $easeOutBack 700ms forwards;
+    left: 300px;
+    bottom: -650px;
+    // @include animate-scale-down(700ms);
   }
 
   .la-benefits__header {

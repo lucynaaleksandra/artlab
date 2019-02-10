@@ -10,10 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add("la-animatable--animate")
-            //sectionObserver.unobserve(entry.target)
-          } else {
-            entry.target.classList.remove("la-animatable--animate")
+            sectionObserver.unobserve(entry.target)
           }
+          // else {
+          //   entry.target.classList.remove("la-animatable--animate")
+          // }
         })
       },
       {
