@@ -41,13 +41,13 @@
     }
 
     .la-users__col-1 {
-      @include will-animate-y(800ms);
+      @include will-animate-y(300ms);
     }
     .la-users__col-2 {
-      @include will-animate-y(1200ms);
+      @include will-animate-y(600ms);
     }
     .la-users__col-3 {
-      @include will-animate-y(1600ms);
+      @include will-animate-y(900ms);
     }
 
     .la-users__col-1,

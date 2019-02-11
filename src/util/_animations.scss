@@ -18,7 +18,7 @@ $easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
   @content;
 
   &.la-animatable--animate {
-    animation: to-origin-y 3000ms $easeOutBack $delay forwards;
+    animation: to-origin-y 2000ms $easeOutBack $delay forwards;
   }
 }
 

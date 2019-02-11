@@ -62,7 +62,9 @@
   .la-join__img-5 {
     top: 80px;
     left: 270px;
-    @include animate-scale-down(200ms);
+    // @include animate-scale-down(200ms);
+    opacity: 0;
+    animation: scale-down 2000ms $easeOutCirc 200ms normal forwards;
   }
   .la-join__img-6 {
     top: 300px;
@@ -96,8 +98,8 @@
     right: 330px;
     bottom: 390px;
     @include animate-scale-down(800ms);
-    // opacity: 0;
-    // animation: scale-down 2000ms $easeOutCirc 800ms normal forwards;
+    opacity: 0;
+    animation: scale-down 2000ms $easeOutCirc 800ms normal forwards;
   }
 
   .la-join__img-7,
