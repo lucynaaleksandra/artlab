@@ -1,7 +1,11 @@
-@import "./nav.scss";
-@import "./header.scss";
-@import "./benefits.scss";
-@import "./process.scss";
-@import "./users.scss";
-@import "./join.scss";
-@import "./footer.scss";
+@import "../util/animations";
+@import "../util/variables";
+@import "../util/mediaq";
+
+@import "./nav";
+@import "./header";
+@import "./benefits";
+@import "./process";
+@import "./users";
+@import "./join";
+@import "./footer";
