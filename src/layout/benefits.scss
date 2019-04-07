@@ -1,12 +1,13 @@
 .la-benefits {
   display: flex;
-  margin: 100px;
+  padding: 100px;
 
   @include responsive-sm {
     flex-direction: column;
   }
   @include responsive-xs {
     flex-direction: column;
+    padding: 25px;
   }
 
   .la-benefits__svg-1,

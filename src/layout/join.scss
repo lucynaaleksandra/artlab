@@ -17,6 +17,10 @@
   .la-join__img-9,
   .la-join__img-10 {
     position: absolute;
+
+    @include responsive-xs {
+      display: none;
+    }
   }
 
   .la-join__svg-1,
@@ -38,19 +42,10 @@
     @include responsive-sm {
       left: 200px;
     }
-    @include responsive-xs {
-      top: 420px;
-      left: 130px;
-    }
   }
   .la-join__svg-3 {
     right: 200px;
     bottom: 100px;
-
-    @include responsive-xs {
-      right: 100px;
-      bottom: 120px;
-    }
   }
   .la-join__svg-4 {
     right: 140px;
@@ -129,11 +124,6 @@
     justify-content: center;
     align-items: center;
     @include will-animate-y;
-
-    // &.la-animatable--animate {
-    // opacity: 0;
-    // animation: scale-down 2000ms $easeOutCirc 800ms forwards;
-    // }
 
     h2 {
       margin-top: 20px;

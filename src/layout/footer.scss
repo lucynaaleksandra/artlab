@@ -3,15 +3,25 @@ hr {
 }
 
 footer {
-  margin: 0 200px;
+  padding: 0 200px;
   display: flex;
   flex-direction: column;
   font-size: 9px;
+
+  @include responsive-xs {
+    padding: 25px;
+  }
 
   .la-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @include responsive-xs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     .la-footer__logo {
       width: 60px;
@@ -20,11 +30,20 @@ footer {
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+
+      @include responsive-xs {
+        margin: 20px;
+      }
     }
 
     .la-footer__social {
       display: flex;
       align-items: center;
+
+      @include responsive-xs {
+        margin-bottom: 20px;
+        // justify-content: space-between;
+      }
 
       i {
         flex-direction: row;
@@ -43,8 +62,17 @@ footer {
       align-items: center;
       justify-content: center;
 
+      @include responsive-xs {
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
       .la-footer__tab {
         margin-right: 20px;
+
+        @include responsive-xs {
+          margin: 0;
+        }
 
         &:hover {
           @include hover-scale-01;
