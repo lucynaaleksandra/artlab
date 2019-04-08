@@ -9,7 +9,7 @@ header {
     padding: 25px;
   }
   @include responsive-xs {
-    padding: 15px;
+    padding: 25px;
   }
 
   .la-header {
@@ -39,9 +39,11 @@ header {
       padding-bottom: 20px;
 
       @include responsive-md {
-        // width: 60%;
         font-size: 12px;
         line-height: 1.5;
+      }
+      @include responsive-xs {
+        // padding: 40px;
       }
     }
 
@@ -49,11 +51,11 @@ header {
     p {
       @include responsive-sm {
         width: 100%;
-        padding: 0;
+        padding: 20px;
       }
       @include responsive-xs {
         width: 100%;
-        padding: 0;
+        padding: 20px;
       }
     }
   }
@@ -82,7 +84,7 @@ header {
   }
 
   .la-header__columns {
-    margin: 0 100px;
+    padding: 0 100px;
     display: flex;
     justify-content: center;
     flex: 1 0 auto;
@@ -90,15 +92,17 @@ header {
     z-index: 3;
 
     @include responsive-md {
-      margin: 0;
+      padding: 0;
     }
     @include responsive-sm {
       flex-direction: column;
-      margin: 0;
+      align-items: center;
+      padding: 0 25px;
     }
     @include responsive-xs {
       flex-direction: column;
-      margin: 0;
+      align-items: center;
+      padding: 0 25px;
     }
 
     .la-header__svg-4 {
@@ -151,7 +155,7 @@ header {
     .la-header__col-2,
     .la-header__col-3 {
       width: 40%;
-      // margin: 20px;
+      margin: 20px;
       display: flex;
       flex-direction: column;
 
